@@ -15,7 +15,7 @@ class CreateUserController{
         });
 
         // return res.json({ ok: true})
-        return res.json(user)
+        return res.json(user);
     }
 }
 

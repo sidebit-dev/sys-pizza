@@ -1,6 +1,7 @@
 import { Router } from 'express';
 
 import { CreateUserController } from './controllers/user/CreateUserController';
+import { AuthUserController } from './controllers/user/AuthUserController';
 
 const router = Router();
 
@@ -9,6 +10,8 @@ const router = Router();
 //    // throw new Error('Erro ao fazer essa requisição')
 // });
 // -- ROTAS USER --
-router.post('/users', new CreateUserController().handle)
+router.post('/users', new CreateUserController().handle);
+
+router.post('/session', new AuthUserController().handle);
 
 export { router };   

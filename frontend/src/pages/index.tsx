@@ -15,7 +15,7 @@ export default function Home() {
     Sys Pizza - Faça seu login
   </title>
 </Head>
-<div className="styles.containerCenter">
+<div className={styles.containerCenter}>
   <Image src={logoImg} alt="Logo Sys Pizzaria" />
 
   <div className={styles.login}>
@@ -33,9 +33,11 @@ export default function Home() {
         type="submit"
         loading={false}
       >
-        Cadastrar
+        Acessar
       </Button>
     </form>
+
+    <a className={styles.text}>Não possui uma conta? Cadastre-se</a>
   </div>
 </div>
 </>  )

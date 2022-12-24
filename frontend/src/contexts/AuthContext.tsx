@@ -65,6 +65,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
         email
       })
     })
+    .catch(() => {
+      // Se deu erro deslogar o user.
+      signOut();
+    })
   }
 
 

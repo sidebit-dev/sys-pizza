@@ -41,7 +41,7 @@ export function ModalOrder({ isOpen, onRequestClose, order }:ModalOrderProps){
            <FiX size={45} color="#f34748"/>
           </button>
 
-          <div>
+          <div className={styles.container}>
             <h2>Detalhes do pedido</h2>
             <span className={styles.table}>
               Mesa: <strong>{order[0].order.table}</strong>
@@ -50,9 +50,13 @@ export function ModalOrder({ isOpen, onRequestClose, order }:ModalOrderProps){
             {order.map( item => (
               <section key={item.id} className={styles.containerItem}>
                 <span>{item.amount} - <strong>{item.product.name}</strong></span>
-                <span className={styles.description}>{item.product.description}</span>
+                <span className={styles.description}> {item.product.description}</span>
               </section>
             ))}
+
+            <button className={styles.buttonOrder} onClick={ () => {}}>
+              Concluir pedido
+            </button>
           </div>
         </Modal>
     )
